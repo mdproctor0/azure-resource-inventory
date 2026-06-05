@@ -57,6 +57,9 @@ pip install -r requirements.txt
 # Authenticate to Azure
 az login
 
+# Set your subscription ID
+export AZURE_SUBSCRIPTION_ID="your-subscription-id"
+
 # Run the script
 python3 inventory.py
 ```
