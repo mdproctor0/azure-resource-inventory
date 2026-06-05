@@ -4,7 +4,11 @@ import csv
 import datetime
 
 # Azure subscription ID
-subscription_id = 'fd521475-76a6-479b-8f2e-73fe1b53d026'
+import os
+subscription_id = os.environ.get("AZURE_SUBSCRIPTION_ID")
+
+if not subscription_id:
+    raise ValueError("AZURE_SUBSCRIPTION_ID environment variable not set. Run: export AZURE_SUBSCRIPTION_ID='your-id'")
 
 def main():
     # Authenticate with Azure
