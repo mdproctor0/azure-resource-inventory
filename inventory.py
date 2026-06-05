@@ -2,9 +2,9 @@ from azure.identity import DefaultAzureCredential
 from azure.mgmt.resource import ResourceManagementClient
 import csv
 import datetime
+import os
 
 # Azure subscription ID
-import os
 subscription_id = os.environ.get("AZURE_SUBSCRIPTION_ID")
 
 if not subscription_id:
